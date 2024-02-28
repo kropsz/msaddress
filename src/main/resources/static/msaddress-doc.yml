@@ -1,0 +1,39 @@
+openapi: 3.0.0
+info:
+  title: ms-address 
+  description: Microserviço para poder acessar os dados de um determinado cep.
+  version: 1.0.0
+servers:
+  - url: http://localhost:8081
+    description: Local server
+paths:
+  /get-address-by-cep/{cep}:
+    get:
+      summary: Retorna um endereço.
+      parameters:
+        - name: cep
+          in: path
+          required: true
+          description: CEP do endereço.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AddressResponse'
+        '500':
+          description: Erro interno
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+components:
+  schemas:
+      AddressResponse:
+        $ref: 'dto/AddressResponse'
+      ErrorMessage:
+        $ref: 'exception/ErrorMessage'
+  
