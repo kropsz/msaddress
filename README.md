@@ -87,4 +87,4 @@ Para configurar a integração com a AWS, siga as instruções abaixo:
 
 ### Conclusão
 
-O microseviço de notificação trabalha em conjunto com o microserviço msuser, recebendo e armazenando eventos de usuário como registro, login e atualizações de dados. A comunicação entre os serviços é feita através do RabbitMQ, e os dados são armazenados em um banco de dados. Este projeto demonstra uma arquitetura de microserviços eficiente e a utilização de tecnologias modernas para a comunicação entre serviços e armazenamento de dados.
+Esse microseviço representa um componente essencial no ecossistema integrado do projeto. Com foco na busca e armazenamento de informações detalhadas sobre o CEP dos usuários do Microserviço msuser, este microserviço desempenha um papel crucial na garantia da precisão dos dados associados aos perfis dos usuários.
