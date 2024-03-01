@@ -1,4 +1,4 @@
-# Microserviço de Address (CompassUOL)
+# Microserviço de Endereço (CompassUOL)
 O projeto foi desenvolvido para o desafio 3 do programa de Bolsas da Compass UOL | Back-end Journey (Spring Boot) - AWS Cloud Context. Esse é um microserviço para buscar e guardar informações mais detalhadas do cep de um usuário do microserviço [msuser](https://github.com/kropsz/msuser). Quando alguma rota como a de registro, login e atualização de usuário é chamada no msuser esse microserviço é chamado via OpenFeign e busca no banco de dados o endereço completo, caso não encontre ele utiliza a API do VIACEP para salvar esse novo endereço. A aplicação também possui integração direta para serviços AWS
 
 ## Tecnologias Utilizadas
