@@ -1,0 +1,17 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: ms-address
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://{AWS_RDS_URL}:3306/db_address?createDatabaseIfNotExist=true&serverTimezone=UTC
+    username: "{AWS_RDS_USERNAME}"
+    password: "{AWS_RDS_PASSWORD}"
+  jpa:
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+    open-in-view: true
